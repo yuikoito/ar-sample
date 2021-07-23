@@ -66,26 +66,24 @@
     <div class="arjs-loader">
       <div>Loading, please wait...</div>
     </div>
-    <a-scene
-      vr-mode-ui="enabled: false;"
-      renderer="logarithmicDepthBuffer: true;"
-      embedded
-      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-    >
-      <!-- use rawgithack to retrieve the correct url for nft marker (see 'trex' below) -->
+    <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
       <a-assets>
         <img
-          id="params"
-          src="https://nurie.s3-ap-northeast-1.amazonaws.com/ogpimg/90d86edc-0a19-41ec-b079-2f743bf722"
+          id="icon_4b_128"
+          src="https://nurie.s3-ap-northeast-1.amazonaws.com/ogpimg/90d86edc-0a19-41ec-b079-2f743bf72297.jpg"
         />
       </a-assets>
-      <a-entity
-        position="300 0 -400"
-        scale="5 5 5"
-        animation="property: position; to: 300 600 -400; loop: true; dur: 3000;"
-      >
-        <a-image width="54" height="30" src="#params"></a-image>
-      </a-entity>
+      　<!-- マーカーを指定 -->
+      <a-marker preset="hiro">
+        　　<!-- 画像を表示 -->
+        <a-image
+          id="icon_4b_128"
+          src="#icon_4b_128"
+          position="0 0 0"
+          rotation="-90 0 0"
+        >
+        </a-image>
+      </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
